@@ -1,0 +1,49 @@
+<div fxLayout = "column" fxLayoutAlign = "center center">
+    <mat-card>
+        
+        <div fxLayout="row" fxLayoutGap="50px">
+            <div fxLayout="column">
+                <div fxLayout="row" fxLayoutAlign="space-between end">
+                    <div >
+                        <p>Load Countries</p>
+                    </div>
+                    <div>
+                        <mat-form-field class="form">
+                            <!-- <mat-label>Favorite food</mat-label> -->
+                            <mat-select>
+                              <mat-option *ngFor="let day of days" [value]="day.value">
+                                {{day.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                </div>
+                   </div>
+               
+                <div  style=" height:40vh; width:40vw">
+                    <canvas id="doughnut-chart" ></canvas>
+                </div>
+            </div>
+            <div fxLayout="column">
+               <div fxLayout="row" fxLayoutAlign="space-between end">
+                <div >
+                    <p>Load States</p>
+                </div>
+                <div>
+                    <mat-form-field class="form">
+                        <!-- <mat-label>Favorite food</mat-label> -->
+                        <mat-select>
+                          <mat-option *ngFor="let day of days" [value]="day.value">
+                            {{day.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+            </div>
+               </div>
+            <div style=" height:40vh; width:40vw">
+                <canvas id="doughnut-chart1" ></canvas>
+                
+            </div>
+        </div>
+    </div>
+    </mat-card>
+</div>

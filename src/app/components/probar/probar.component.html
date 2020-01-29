@@ -1,0 +1,14 @@
+<div fxLayoutAlign="center center">
+    <mat-card class="card" fxLayout="column" fxLayoutGap="10px">
+        <div>
+            <p>Loan Progress</p>
+        </div>
+        <div>
+          <mat-progress-bar style="height: 15px;"mode="determinate" [value]="val"></mat-progress-bar>
+        </div><br>
+        <div *ngFor="let d of data; let i = index">
+            <mat-checkbox [(ngModel)]="select[i]" [checked]="select[i]" (change)="checkChange(i)">{{d}}</mat-checkbox><br>
+        </div>
+    </mat-card>
+    
+</div>
